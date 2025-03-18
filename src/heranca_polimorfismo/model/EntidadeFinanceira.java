@@ -1,4 +1,4 @@
-package heranca_polimorfismo;
+package heranca_polimorfismo.model;
 
 // Superclasse base para reutilização e herdar os dados para as classes criadas que podem utilizar esses dados
 public class EntidadeFinanceira {

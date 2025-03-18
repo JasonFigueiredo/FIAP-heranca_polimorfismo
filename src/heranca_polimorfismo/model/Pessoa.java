@@ -1,4 +1,4 @@
-package heranca_polimorfismo;
+package heranca_polimorfismo.model;
 
 public class Pessoa {
     private String nome;
@@ -9,19 +9,19 @@ public class Pessoa {
         this.email = email;
     }
 
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email){
+    public void setEmail(String email) {
         this.email = email;
     }
 
