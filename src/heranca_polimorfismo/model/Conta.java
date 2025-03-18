@@ -1,21 +1,34 @@
-package heranca_polimorfismo;
+package heranca_polimorfismo.model;
 
 public class Conta extends EntidadeFinanceira {
     // Atributos da Conta
+    private String userId;
     private String agencia;
     private String numero;
     private String tipoconta;
     private String cpf;
     private double saldo;
 
-    // Construtor com parâmetros com os atributos da Conta + o que herdou da EntidadeFinanceira
-    public Conta(String nome, String id, String agencia, String numero, String tipoconta, String cpf, double saldo) {
-        super(nome, id); // chama o construtor da Super classe "EntidadeFinanceira" usando o "SUPER" e inserindo os atributos
+    // Construtor com parâmetros com os atributos da Conta + o que herdou da
+    // EntidadeFinanceira
+    public Conta(String userId, String nome, String id, String agencia, String numero, String tipoconta, String cpf,
+            double saldo) {
+        super(nome, id); // chama o construtor da Super classe "EntidadeFinanceira" usando o "SUPER" e
+                         // inserindo os atributos
+        this.userId = userId;
         this.agencia = agencia;
         this.numero = numero;
         this.tipoconta = tipoconta;
         this.cpf = cpf;
         this.saldo = saldo;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getAgencia() {
@@ -63,7 +76,8 @@ public class Conta extends EntidadeFinanceira {
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("Informações da conta");
         System.out.println("");
-        super.exibirInfo(); //reutiliza o metodo da SuperClasse para exibir as infomações como "Nome" e "ID"
+        super.exibirInfo(); // reutiliza o metodo da SuperClasse para exibir as infomações como "Nome" e
+                            // "ID"
         System.out.println("Agência: " + agencia);
         System.out.println("Número da conta: " + numero);
         System.out.println("Tipo de conta: " + tipoconta);
@@ -71,4 +85,3 @@ public class Conta extends EntidadeFinanceira {
         System.out.println("Saldo: " + saldo);
     }
 }
-

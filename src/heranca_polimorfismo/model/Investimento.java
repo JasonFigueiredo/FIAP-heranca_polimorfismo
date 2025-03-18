@@ -1,16 +1,26 @@
-package heranca_polimorfismo;
+package heranca_polimorfismo.model;
 
 public class Investimento {
     // Atributos
+    private String userId;
     private String tipoInvestimento;
     private double valorInvestido;
     private double rendimento;
 
     // Construtor com parâmetros
-    public Investimento(String tipoInvestimento, double valorInvestido, double rendimento) {
-       this.tipoInvestimento = tipoInvestimento;
-       this.valorInvestido = valorInvestido;
-       this.rendimento = rendimento;
+    public Investimento(String userId, String tipoInvestimento, double valorInvestido, double rendimento) {
+        this.userId = userId;
+        this.tipoInvestimento = tipoInvestimento;
+        this.valorInvestido = valorInvestido;
+        this.rendimento = rendimento;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getTipoInvestimento() {
@@ -32,6 +42,7 @@ public class Investimento {
     public double getRendimento() {
         return rendimento;
     }
+
     public void setRendimento(double rendimento) {
         this.rendimento = rendimento;
     }
@@ -47,5 +58,3 @@ public class Investimento {
         System.out.println("Seu rendimento é de: " + rendimento);
     }
 }
-
-

@@ -1,18 +1,28 @@
-package heranca_polimorfismo;
+package heranca_polimorfismo.model;
 
 public class Transacao {
     // Atributos
+    private String userId;
     private String tipo;
     private String valor;
     private String data;
     private String numeroTransferencia;
 
     // Construtor com parâmetros
-    public Transacao(String tipo, String valor, String data, String numeroTransferencia) {
+    public Transacao(String userId, String tipo, String valor, String data, String numeroTransferencia) {
+        this.userId = userId;
         this.tipo = tipo;
         this.valor = valor;
         this.data = data;
         this.numeroTransferencia = numeroTransferencia;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getTipo() {
